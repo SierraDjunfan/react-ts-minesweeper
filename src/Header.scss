@@ -1,0 +1,29 @@
+@import './Assets/GlobalStyles/colors';
+@import './Assets/GlobalStyles/globalVariables';
+@import './Assets/GlobalStyles/reset';
+@import './Assets/GlobalStyles/typography';
+
+header {
+  width: 100%;
+  box-shadow: $shadow;
+  margin-bottom: $shadow-height + 0.75rem;
+  background-color: black;
+  }
+
+  #header-content {
+    display:flex;
+    flex-direction: row;
+    background-color: black;
+    align-items: center;
+    color: white;
+    font: 1rem;
+    padding: 0.7rem 0 0.7rem 0;
+    justify-content: space-around;
+    max-width: 570px;
+    margin: auto;
+
+    > * {
+      flex: 1;
+      text-align: center;
+    }
+  }

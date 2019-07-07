@@ -1,0 +1,28 @@
+@import './Assets/GlobalStyles/globalVariables';
+  
+@mixin reset-button {
+  @include covered-image-style();
+  @include header-icon-dimensions;
+  border: none;
+  background-color: transparent;
+  }
+  
+.normal {
+    @include reset-button();
+    background-image: url(./Assets/Images/normal.png);
+  }
+  
+  .placing {
+    @include reset-button();
+    background-image: url(./Assets/Images/placing.png);
+  }
+  
+  .win {
+    @include reset-button();
+    background-image: url(./Assets/Images/win.png);
+  }
+  
+  .lost {
+    @include reset-button();
+    background-image: url(./Assets/Images/lost.png);
+  }

@@ -1,0 +1,45 @@
+@import "./Assets/GlobalStyles/typography";
+@import "./Assets/GlobalStyles/colors";
+
+html {
+  background: linear-gradient($bg-colorA, $bg-colorB) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: $font-main;
+
+  button {
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: $min-font-extra-small;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: $min-font-small;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: $min-font-medium;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: $min-font-large;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: $min-font-extra-large;
+  }
+}

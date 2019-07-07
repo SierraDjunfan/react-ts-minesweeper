@@ -1,0 +1,12 @@
+@import './Assets/GlobalStyles/colors';
+@import './Assets/GlobalStyles/globalVariables';
+@import './Assets/GlobalStyles/reset';
+@import './Assets/GlobalStyles/typography';
+
+#minefield {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(10, 1.5rem);
+    grid-gap: 0.19rem;
+    justify-content: center;
+}

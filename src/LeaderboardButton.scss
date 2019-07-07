@@ -1,0 +1,9 @@
+@import './Assets/GlobalStyles/globalVariables';
+
+#leaderboard-button {
+  @include covered-image-style;
+  @include header-icon-dimensions;
+  background-image: url(./Assets/Images/leader.png);
+  border: none;
+  background-color: transparent;
+  }

@@ -1,0 +1,105 @@
+@import "./Assets/GlobalStyles/colors";
+@import "./Assets/GlobalStyles/globalVariables";
+@import "./Assets/GlobalStyles/reset";
+@import "./Assets/GlobalStyles/typography";
+
+@keyframes squareHover {
+  from {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  to {
+    transform: scale(0.9);
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    background-color: #129688;
+  }
+}
+
+@mixin all-squares {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+}
+
+@mixin square-dimensions {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@mixin number-square($color, $font-size) {
+  @include square-dimensions();
+  @include all-squares();
+  background-color: $color;
+  display: flex;
+  font-size: $font-size;
+  font-family: $font-main;
+  color: $color-text-minefield;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin image-square($size) {
+  @include all-squares();
+  @include square-dimensions();
+  background-position: center;
+  background-size: $size;
+  background-repeat: no-repeat;
+}
+
+.square-numbered-one {
+  @include number-square($color-numbered-1, $font-size-1);
+  @include all-squares();
+}
+
+.square-numbered-two {
+  @include number-square($color-numbered-2, $font-size-2);
+  @include all-squares();
+}
+
+.square-numbered-three {
+  @include number-square($color-numbered-3, $font-size-3);
+  @include all-squares();
+}
+
+.square-numbered-four {
+  @include number-square($color-numbered-4, $font-size-4);
+  @include all-squares();
+}
+
+.square-flagged {
+  @include image-square(12px);
+  @include all-squares();
+  background-color: $color-undiscovered;
+  background-image: url(./Assets/Images/flag.png);
+}
+
+.square-undiscovered {
+  @include square-dimensions();
+  @include all-squares();
+  background-color: $color-undiscovered;
+}
+
+.square-discovered {
+  @include all-squares();
+  @include square-dimensions();
+  background-color: $color-discovered;
+}
+
+.square-mine {
+  @include image-square(20px);
+  @include all-squares();
+  background-color: black;
+  background-image: url(./Assets/Images/mine.png);
+}
+
+#undiscovered-minefield-square:hover {
+    @include all-squares();
+    animation-name: squareHover;
+    animation-duration: 0.1s;
+    transform: scale(0.9);
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    background-color: #129688;
+}

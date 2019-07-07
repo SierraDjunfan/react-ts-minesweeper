@@ -1,0 +1,25 @@
+@import './colors';
+
+$minimum-button-size: 44px;
+
+$shadow-height: 0.7rem;
+$shadow: 0 $shadow-height 0 0 $color-shadow;
+
+$header-icon-size: 1.1rem;
+
+@mixin minimum-button-dimensions {
+  min-height: $minimum-button-size;
+  min-width: $minimum-button-size;
+}
+
+@mixin header-icon-dimensions {
+    width: $header-icon-size;
+    height: $header-icon-size;
+  }
+  
+@mixin covered-image-style {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
